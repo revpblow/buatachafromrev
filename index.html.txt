@@ -1,0 +1,69 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Sayang 🦸🏼‍♀️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-image: url('https://raw.githubusercontent.com/revpblow/foto/refs/heads/main/IMG_9403.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        .bg-overlay {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 bg-overlay">
+
+    <!-- Layar Password -->
+    <div id="lock-screen" class="bg-white/90 p-8 rounded-3xl shadow-2xl text-center w-full max-w-sm z-10 border border-pink-100">
+        <div class="text-5xl mb-4">🔐</div>
+        <h2 class="text-xl font-semibold text-pink-600 mb-2">Halo Sayang!</h2>
+        <p class="text-gray-600 mb-1 text-sm">Masukkan tanggal spesial kita</p>
+        <p class="text-pink-400 font-bold mb-6 text-sm">(Petunjuk: Bulan-Tanggal)</p>
+        <input type="password" id="password" maxlength="4" placeholder="0000" 
+            class="w-full text-center text-2xl py-3 border-2 border-pink-200 rounded-2xl mb-4 focus:outline-none focus:border-pink-400 bg-white">
+        <button onclick="checkPassword()" class="w-full bg-pink-500 text-white py-3 rounded-2xl font-semibold hover:bg-pink-600 transition shadow-lg shadow-pink-200">Buka Pesan</button>
+        <p id="error" class="text-red-500 text-sm mt-3 hidden font-medium">Password salah, coba lagi ya sayang!</p>
+    </div>
+
+    <!-- Layar Pesan -->
+    <div id="message-screen" class="bg-white/95 p-8 rounded-3xl shadow-2xl w-full max-w-lg hidden z-10 border border-pink-100">
+        <h1 class="text-2xl font-bold text-pink-600 mb-4 text-center">Good Morning, Sayang! ✨</h1>
+        <p class="text-gray-700 leading-relaxed mb-6 text-sm">
+            Good morning, sayang. I woke up today with a huge smile on my face just because you crossed my mind, and i figured i should take a moment to let you know how much i’m really thinking about you. 
+            <br><br>
+            I honestly don’t think words are enough to describe how gorgeous you are, not just because you’re physically stunning, but because there’s something so magnetic and beautiful about the way you just exist. It’s in your smile, the way you laugh, and how you handle everything with such grace. You honestly have this glow that makes everything around you feel a little more peaceful and a little more special.
+            <br><br>
+            I feel so incredibly lucky that out of everyone in the world, i get to be the one by your side. You’ve honestly become the best part of my routine. I really hope you know how much i admire you. Take a deep breath and start your day knowing that you’re deeply loved and appreciated.
+            <br><br>
+            Stay hydrated, take care of yourself, and don't let anything bring that beautiful mood of yours down. I’m always here cheering you on! You’re my favorite person, and i hope today treats you just as well as you treat everyone around you. Have the best day, my love.
+        </p>
+        <div class="border-t pt-4 text-center">
+            <p class="font-bold text-pink-500">From: rev 🦸🏼‍♂️</p>
+            <p class="text-gray-500 text-sm">To: my favorite person 🦸🏼‍♀️</p>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            if (password === "0224") {
+                document.getElementById('lock-screen').style.display = 'none';
+                document.getElementById('message-screen').style.display = 'block';
+            } else {
+                document.getElementById('error').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
+
+```
